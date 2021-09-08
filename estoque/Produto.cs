@@ -4,20 +4,25 @@ namespace estoque
 {
     class Produto
     {
+        //criando as propriedades
         public string Nome { get; set; }
         public double Preco { get; set; }
         public int Quant { get; set; }
 
+        //construtor vazio
         public Produto()
         {
         }
 
+        //criando o construtor
         public Produto(string nome, double preco, int quant)
         {
             Nome = nome;
             Preco = preco;
             Quant = quant;
         }
+
+        //criando métodos
         public double valorTotalEmEstoque()
         {
             return Preco * Quant;
@@ -31,6 +36,7 @@ namespace estoque
             Quant -= quantidade;
         }
 
+        //criando tostring
         public override string ToString()
         {
             return Nome + ", R$" + Preco.ToString("F2", CultureInfo.InvariantCulture) + ", "

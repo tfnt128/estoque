@@ -17,6 +17,7 @@ namespace estoque
             Console.Write("Quantidade em estoque: ");
             int quant = int.Parse(Console.ReadLine());
 
+            //instanciando as propriedades colocando os parâmetros pelo construtor
             Produto prod = new Produto(nome, preco, quant);
 
             Console.WriteLine("Dados do produto: " + prod);
