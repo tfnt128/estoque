@@ -4,8 +4,8 @@ namespace estoque
 {
     class Produto
     {
-        //criando as propriedades
-        public string Nome { get; set; }
+        //criando as propriedades com autoproperties
+        public string _nome;
         public double Preco { get; private set; }
         public int Quant { get; private set; }
 
@@ -17,19 +17,20 @@ namespace estoque
         //criando o construtor
         public Produto(string nome, double preco, int quant)
         {
-            Nome = nome;
+            _nome = nome;
             Preco = preco;
             Quant = quant;
         }
 
-        public string nome
+        //fazendo get e set do nome
+        public string Nome
         {
-            get { return nome; }
+            get { return _nome; }
             set
             {
                 if (value != null && value.Length > 1)
                 {
-                    nome = value;
+                    _nome = value;
                 }
             }
         }
