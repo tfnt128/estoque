@@ -4,10 +4,10 @@ namespace estoque
 {
     class Produto
     {
-        //criando as propriedades
-        public string Nome { get; set; }
-        public double Preco { get; set; }
-        public int Quant { get; set; }
+        //criando as propriedades com properties
+        public string _nome; 
+        public double _preco { get; set; }
+        public int _quant { get; set; }
 
         //construtor vazio
         public Produto()
@@ -17,30 +17,53 @@ namespace estoque
         //criando o construtor
         public Produto(string nome, double preco, int quant)
         {
-            Nome = nome;
-            Preco = preco;
-            Quant = quant;
+            _nome = nome;
+            _preco = preco;
+            _quant = quant;
+        }
+
+        //utilização das properties
+        public string Nome
+        {
+            get { return _nome; }
+            set
+            {
+                if (value != null && value.Length > 1)
+                {
+                    _nome = value;
+                }
+            }
+        }
+
+        //utilização das properties
+        public double Preco
+        {
+            get { return _preco; }
+        }
+        public int Quantidade
+        {
+            get { return _quant; }
         }
 
         //criando métodos
         public double valorTotalEmEstoque()
         {
-            return Preco * Quant;
+            return _preco * _quant;
         }
         public void adcionarProdutos(int quantidade)
         {
-            Quant += quantidade;
+            _quant += quantidade;
         }
         public void removerProdutos(int quantidade)
         {
-            Quant -= quantidade;
+            _quant -= quantidade;
         }
 
         //criando tostring
         public override string ToString()
         {
-            return Nome + ", R$" + Preco.ToString("F2", CultureInfo.InvariantCulture) + ", "
-                + Quant + " Unidades, Total: " + (Preco * Quant).ToString("F2", CultureInfo.InvariantCulture);
+            return _nome + ", R$" + _preco.ToString("F2", CultureInfo.InvariantCulture) + ", "
+                + _quant + " Unidades, Total: " + (_preco * _quant).ToString("F2", CultureInfo.InvariantCulture);
         }
     }
 }

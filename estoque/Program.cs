@@ -27,7 +27,7 @@ namespace estoque
             prod.adcionarProdutos(ad);
 
             Console.WriteLine("Dados atualizados: " + prod);
-            Console.WriteLine();
+            
 
 
 
