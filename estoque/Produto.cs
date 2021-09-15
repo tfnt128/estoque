@@ -22,7 +22,7 @@ namespace estoque
             Quant = quant;
         }
 
-        //fazendo get e set do nome
+        //Utilizando a properties no nome
         public string Nome
         {
             get { return _nome; }
