@@ -5,9 +5,9 @@ namespace estoque
     class Produto
     {
         //criando as propriedades
-        public string Nome { get; set; }
-        public double Preco { get; set; }
-        public int Quant { get; set; }
+        public string Nome;
+        public double Preco;
+        public int Quant;
 
         //construtor vazio
         public Produto()
@@ -20,6 +20,16 @@ namespace estoque
             Nome = nome;
             Preco = preco;
             Quant = quant;
+        }
+
+        //Utilizando o Get e Set
+        public string GetNome()
+        {
+            return Nome;
+        }
+        public void SetNome(string nome)
+        {
+            Nome = nome;
         }
 
         //criando métodos
