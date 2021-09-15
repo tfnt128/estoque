@@ -6,8 +6,8 @@ namespace estoque
     {
         //criando as propriedades
         public string Nome { get; set; }
-        public double Preco { get; set; }
-        public int Quant { get; set; }
+        public double Preco { get; private set; }
+        public int Quant { get; private set; }
 
         //construtor vazio
         public Produto()
@@ -21,6 +21,19 @@ namespace estoque
             Preco = preco;
             Quant = quant;
         }
+
+        public string nome
+        {
+            get { return nome; }
+            set
+            {
+                if (value != null && value.Length > 1)
+                {
+                    nome = value;
+                }
+            }
+        }
+
 
         //criando métodos
         public double valorTotalEmEstoque()

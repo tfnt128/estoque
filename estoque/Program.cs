@@ -29,7 +29,7 @@ namespace estoque
             Console.WriteLine("Dados atualizados: " + prod);
 
 
-            Console.WriteLine();
+            
 
 
 
