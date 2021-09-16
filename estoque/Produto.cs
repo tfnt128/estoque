@@ -4,10 +4,10 @@ namespace estoque
 {
     class Produto
     {
-        //criando as propriedades
-        public string Nome;
-        public double Preco;
-        public int Quant;
+        //criando os atributos
+        private string Nome;
+        private double Preco;
+        private int Quant;
 
         //construtor vazio
         public Produto()
