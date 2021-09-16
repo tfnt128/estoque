@@ -4,8 +4,8 @@ namespace estoque
 {
     class Produto
     {
-        //criando as propriedades com autoproperties
-        public string _nome;
+        //criando os atributos com autoproperties
+        private string _nome;
         public double Preco { get; private set; }
         public int Quant { get; private set; }
 
